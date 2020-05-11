@@ -19,6 +19,16 @@ struct AddBookView: View {
     @State private var review = ""
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
     
+    var isFormComplete: Bool {
+        if genre == ""
+        {
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -53,6 +63,7 @@ struct AddBookView: View {
                         try? self.moc.save()
                         self.presentationMode.wrappedValue.dismiss()
                     }
+                .disabled(isFormComplete == false)
                     
                 }
             }

@@ -70,13 +70,13 @@
 				83AEE7692468DD1A008003FA /* SceneDelegate.swift */,
 				83AEE76E2468DD1A008003FA /* ContentView.swift */,
 				83AEE78224699BD4008003FA /* EmojiRatingView.swift */,
+				83AEE78024699AE7008003FA /* RatingView.swift */,
+				83AEE77E24699881008003FA /* AddBookView.swift */,
 				83AEE78424699E39008003FA /* DetailView.swift */,
 				83AEE7702468DD1C008003FA /* Assets.xcassets */,
 				83AEE7752468DD1C008003FA /* LaunchScreen.storyboard */,
 				83AEE7782468DD1C008003FA /* Info.plist */,
 				83AEE76B2468DD1A008003FA /* BookWorm.xcdatamodeld */,
-				83AEE77E24699881008003FA /* AddBookView.swift */,
-				83AEE78024699AE7008003FA /* RatingView.swift */,
 				83AEE7722468DD1C008003FA /* Preview Content */,
 			);
 			path = BookWorm;

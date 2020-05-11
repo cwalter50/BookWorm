@@ -17,6 +17,15 @@ struct DetailView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var showingDeleteAlert = false
     
+    var formattedDateString: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        
+        let date: Date = book.date ?? Date()
+        
+        return formatter.string(from: date)
+    }
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -39,6 +48,9 @@ struct DetailView: View {
 
                 Text(self.book.review ?? "No review")
                     .padding()
+                Text(self.formattedDateString)
+                    .padding()
+                    .foregroundColor(.secondary)
 
                 RatingView(rating: .constant(Int(self.book.rating)))
                     .font(.largeTitle)
